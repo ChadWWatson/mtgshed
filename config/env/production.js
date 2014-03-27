@@ -1,7 +1,7 @@
 'use strict';
 
 module.exports = {
-    db: 'mongodb://web:mtgonline@oceanic.mongohq.com:10041/mtgshed',
+    db: 'mongodb://chadw:Boris1012@oceanic.mongohq.com:10041/mtgshed',
     app: {
         name: 'MTG Shed'
     },
@@ -18,7 +18,7 @@ module.exports = {
     github: {
         clientID: 'c06065d681d3ec03dd2e',
         clientSecret: '42dba95daea2b34977d13069c05e884e4a394ed3',
-        callbackURL: 'http://localhost:3000/auth/github/callback'
+        callbackURL: 'http://mtgshed.herokuapp.com/auth/github/callback'
     },
     google: {
         clientID: 'APP_ID',
