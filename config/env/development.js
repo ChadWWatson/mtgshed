@@ -1,7 +1,7 @@
 'use strict';
 
 module.exports = {
-    db: 'mongodb://localhost/mtgshed',
+    db: 'mongodb://chadw:Boris1012@oceanic.mongohq.com:10041/mtgshed',
     app: {
         name: 'MTG - Shead - ** DEV **'
     },
@@ -16,8 +16,8 @@ module.exports = {
         callbackURL: 'http://localhost:3000/auth/twitter/callback'
     },
     github: {
-        clientID: 'c06065d681d3ec03dd2e',
-        clientSecret: '42dba95daea2b34977d13069c05e884e4a394ed3',
+        clientID: '8c03666f583409c28d98',
+        clientSecret: '672a44e5bd853faf86eefd11d1cd9c9b71bc0f24',
         callbackURL: 'http://localhost:3000/auth/github/callback'
     },
     google: {

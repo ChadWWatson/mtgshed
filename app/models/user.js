@@ -27,7 +27,11 @@ var UserSchema = new Schema({
     twitter: {},
     github: {},
     google: {},
-    linkedin: {}
+    linkedin: {},
+    isAdmin: {
+        type: Boolean,
+        default: false
+    }
 });
 
 /**
