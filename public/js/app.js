@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('mean', ['ngCookies', 'ngResource', 'ui.bootstrap', 'ui.router', 'mean.system', 'mean.articles']);
+angular.module('mtgshed', ['ngCookies', 'ngResource', 'ui.bootstrap', 'ui.router', 'mtgshed.system', 'mtgshed.articles']);
 
-angular.module('mean.system', []);
-angular.module('mean.articles', []);
+angular.module('mtgshed.system', []);
+angular.module('mtgshed.articles', []);
