@@ -1,0 +1,9 @@
+<section data-ng-controller="SetListsController" data-ng-init="find()">
+    <ul class="articles unstyled">
+        <li data-ng-repeat="set in sets">
+            <span>{{set.code}}</span> /
+            <span>{{set.name}}</span>
+        </li>
+    </ul>
+    <h1 data-ng-hide="!sets || sets.length">No Sets yet. <br> Why don't you <a href="/#!/articles/create">Create One</a>?</h1>
+</section>

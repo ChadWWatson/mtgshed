@@ -8,9 +8,9 @@ angular.module('mtgshed').config(['$stateProvider', '$urlRouterProvider',
 
     // states for my app
     $stateProvider
-      .state('all articles', {
-        url: '/articles',
-        templateUrl: 'views/articles/list.html'
+      .state('All Sets', {
+        url: '/setlists',
+        templateUrl: 'views/setlists/list.html'
     })
       .state('create article', {
         url: '/articles/create',
