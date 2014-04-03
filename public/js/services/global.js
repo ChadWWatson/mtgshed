@@ -4,10 +4,14 @@
 angular.module('mtgshed.system').factory('Global', [
     function() {
         var _this = this;
+        var isAdmin = false;
+        if ( window.user ) {
+            isAdmin = window.user.isAdmin;
+        }
         _this._data = {
             user: window.user,
             authenticated: !! window.user,
-            isAdmin: !!window.user.isAdmin
+            isAdmin: isAdmin
         };
 
         return _this._data;

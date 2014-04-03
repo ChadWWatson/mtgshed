@@ -1,6 +1,7 @@
 {% extends '../layouts/default.html' %}
 
 {% block content %}
+<div class="container-fluid content">
     <div class="row">
         <div class="col-md-offset-1 col-md-5">
             <a href="/auth/facebook"><img src="/img/icons/facebook.png"></a>
@@ -9,7 +10,7 @@
             <a href="/auth/google"><img src="/img/icons/google.png"></a>
             <a href="/auth/linkedin"><img src="/img/icons/linkedin.png"></a>
         </div>
-        <div class="col-md-6">
+        <div class="col-md-6 main">
             {% if message && message.length  %}
             <div class="fade in alert alert-error">
                 <button class="close" data-dismiss="alert">&times;</button>
@@ -21,4 +22,5 @@
             {% block auth %}{% endblock %}
         </div>
     </div>
+</div>
 {% endblock %}
