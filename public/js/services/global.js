@@ -6,7 +6,7 @@ angular.module('mtgshed.system').factory('Global', [
         var _this = this;
         var isAdmin = false;
         console.log(window.user);
-        if ( window.user != null ) {
+        if ( window.user !== null ) {
             isAdmin = window.user.isAdmin;
         }
         _this._data = {
