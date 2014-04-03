@@ -7,8 +7,8 @@ angular.module('mtgshed.system').controller('HeaderController', ['$scope', 'Glob
         'title': 'Articles',
         'link': 'articles'
     }, {
-        'title': 'Create New Article',
-        'link': 'articles/create'
+        'title': 'Admin',
+        'link': 'admin'
     }];
 
     $scope.isCollapsed = false;

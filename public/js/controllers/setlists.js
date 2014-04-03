@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('mtgshed.setlists').controller('SetListsController', ['$scope', '$stateParams', '$location', 'Global', 'SetLists', function ($scope, $stateParams, $location, Global, SetLists) {
+angular.module('mtgshed.setlists').controller('SetListsController', ['$scope', '$stateParams', '$location', 'Global', 'SetLists', 'fileReader', function ($scope, $stateParams, $location, Global, SetLists, fileReader) {
     $scope.global = Global;
 
     $scope.find = function() {
@@ -17,4 +17,29 @@ angular.module('mtgshed.setlists').controller('SetListsController', ['$scope', '
             $scope.setList = setList;
         });
     };
+
+    //an array of files selected
+    $scope.files = [];
+
+    //listen for the file selected event
+    $scope.$on('fileSelected', function (event, args) {
+        $scope.$apply(function () {
+            //add the file object to the scope's files collection
+            $scope.file = args.file;
+            $scope.getFile();
+        });
+    });
+
+    $scope.getFile = function () {
+        $scope.progress = 0;
+        fileReader.readAsText($scope.file, $scope)
+            .then(function(result) {
+                console.log(JSON.parse(result));
+            });
+    };
+
+    $scope.$on('fileProgress', function(e, progress) {
+        $scope.progress = progress.loaded / progress.total;
+        console.log($scope.progress);
+    });
 }]);
