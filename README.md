@@ -1,6 +1,6 @@
-# MEAN Stack
+# MTG SHED
 
-MEAN is a boilerplate that provides a nice starting point for [MongoDB](http://www.mongodb.org/), [Node.js](http://www.nodejs.org/), [Express](http://expressjs.com/), and [AngularJS](http://angularjs.org/) based applications. It is designed to give you quick and organized way to start developing of MEAN based web apps with useful modules like mongoose and passport pre-bundled and configured. We mainly try to take care of the connection points between existing popular frameworks and solve common integration problems.  
+This is an app for managing magic the gathering cards
 
 ## Prerequisites
 * Node.js - Download and Install [Node.js](http://www.nodejs.org/download/). You can also follow [this gist](https://gist.github.com/isaacs/579814) for a quick and easy way to install Node.js and npm
@@ -17,14 +17,6 @@ $ npm install -g bower
 ### Optional
 * Grunt - Download and Install [Grunt](http://gruntjs.com).
 
-## Additional Packages
-* Express - Defined as npm module in the [package.json](package.json) file.
-* Mongoose - Defined as npm module in the [package.json](package.json) file.
-* Passport - Defined as npm module in the [package.json](package.json) file.
-* AngularJS - Defined as bower module in the [bower.json](bower.json) file.
-* Twitter Bootstrap - Defined as bower module in the [bower.json](bower.json) file.
-* UI Bootstrap - Defined as bower module in the [bower.json](bower.json) file.
-
 ## Quick Install
   The quickest way to get started with MEAN is to clone the project and utilize it like this:
 
@@ -35,11 +27,11 @@ $ npm install -g bower
   We recommend using [Grunt](https://github.com/gruntjs/grunt-cli) to start the server:
 
     $ grunt
-    
+
   When not using grunt you can use:
 
     $ node server
-    
+
   Then open a browser and go to:
 
     http://localhost:3000
@@ -81,7 +73,7 @@ Bower Clean Cache:
 $ bower cache clean
 ```
 
- 
+
 ## Configuration
 All configuration is specified in the [config](config/) folder, particularly the [config.js](config/config.js) file and the [env](config/env/) files. Here you will need to specify your application name, database name, as well as hook up any social app keys if you want integration with Twitter, Facebook, GitHub or Google.
 
@@ -104,36 +96,6 @@ If you are using node instead of grunt, it is very similar:
 	$ NODE_ENV=test node server
 
 > NOTE: Running Node.js applications in the __production__ environment enables caching, which is disabled by default in all other environments.
-
-## Getting Started
-  We pre-included an article example, check it out:
-  * [The Model](app/models/article.js) - Where we define our object schema.
-  * [The Controller](app/controllers/articles.js) - Where we take care of our backend logic.
-  * [NodeJS Routes](app/routes) - Where we define our REST service routes.
-  * [AngularJs Routes](public/js/config.js) - Where we define our CRUD routes.
-  * [The AngularJs Service](public/js/services/articles.js) - Where we connect to our REST service.
-  * [The AngularJs Controller](public/js/controllers/articles.js) - Where we take care of  our frontend logic.
-  * [The AngularJs Views Folder](public/views/articles) - Where we keep our CRUD views.
-
-## Heroku Quick Deployment
-Before you start make sure you have <a href="https://toolbelt.heroku.com/">heroku toolbelt</a> installed and an accessible mongo db instance - you can try <a href="http://www.mongohq.com/">mongohq</a> which have an easy setup )
-
-```bash
-git init
-git add .
-git commit -m "initial version"
-heroku apps:create
-git push heroku master
-```
-
-## More Information
-  * Visit us at [Linnovate.net](http://www.linnovate.net/).
-  * Visit our [Ninja's Zone](http://www.meanleanstartupmachine.com/) for extended support.
-
-## Credits
-* Inspired by the great work of [Madhusudhan Srinivasa](https://github.com/madhums/)
-* The MEAN name was coined by [Valeri Karpov](http://blog.mongodb.org/post/49262866911/the-mean-stack-mongodb-expressjs-angularjs-and)
-* MEAN could not be as great as it is without the contribution of the [following people](https://github.com/linnovate/mean/blob/master/AUTHORS). 
 
 ## License
 (The MIT License)
