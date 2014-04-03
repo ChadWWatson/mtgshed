@@ -6,7 +6,9 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="#">Project name</a>
+        <a class="navbar-brand" href="#">
+            <div class="mana-frost-icon pull-left"></div> MTG Shed
+        </a>
     </div>
     <div collapse="isCollapsed" class="navbar-collapse collapse navbar-responsive-collapse">
         <ul class="navbar-nav nav pull-right" data-ng-hide="global.authenticated">
@@ -28,10 +30,8 @@
             </li>
         </ul>
         <ul class="nav navbar-nav navbar-right" data-ng-show="global.authenticated">
-            <li><a href="#!/admin/setlists">Set Lists</a></li>
-            <li><a href="#!/settings">Settings</a></li>
-            <li><a href="#">Profile</a></li>
-            <li><a href="#">Help</a></li>
+            <li data-ng-show="global.isAdmin"><a href="#!/admin">Admin</a></li>
+            <li><a href="#!/dashboard">Dashboard</a></li>
         </ul>
     </div>
 </div>

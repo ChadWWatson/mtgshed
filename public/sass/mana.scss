@@ -1,0 +1,21 @@
+.svgSprite {
+    background-image: url('../img/Mana.svg');
+    background-repeat: no-repeat;
+    background-size: 1000%;
+}
+.svgSprite-icon {
+    @extend .svgSprite;
+    height: 30px;
+    width: 30px;
+}
+.mana-zero-icon { @extend .svgSprite-icon; background-position: 0 0; }
+.mana-one-icon { @extend .svgSprite-icon; background-position: -30px 0; }
+.mana-two-icon { @extend .svgSprite-icon; background-position: -60px 0; }
+.mana-three-icon { @extend .svgSprite-icon; background-position: -90px 0; }
+.mana-four-icon { @extend .svgSprite-icon; background-position: -120px 0; }
+.mana-five-icon { @extend .svgSprite-icon; background-position: -150px 0; }
+.mana-six-icon { @extend .svgSprite-icon; background-position: -180px 0; }
+.mana-seven-icon { @extend .svgSprite-icon; background-position: -210px 0; }
+.mana-eight-icon { @extend .svgSprite-icon; background-position: -240px 0; }
+.mana-nine-icon { @extend .svgSprite-icon; background-position: -270px 0; }
+.mana-frost-icon { @extend .svgSprite-icon; background-position: -270px -60px; }

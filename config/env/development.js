@@ -3,7 +3,7 @@
 module.exports = {
     db: 'mongodb://chadw:Boris1012@oceanic.mongohq.com:10041/mtgshed',
     app: {
-        name: 'MTG - Shead - ** DEV **'
+        name: 'MTG Shed'
     },
     facebook: {
         clientID: 'APP_ID',

@@ -25,6 +25,13 @@ module.exports = function(grunt) {
                 options: {
                     livereload: true
                 }
+            },
+            sass: {
+                files: ['public/sass/**'],
+                tasks: ['sass'],
+                options: {
+                    livereload: true
+                }
             }
         },
         jshint: {
@@ -32,6 +39,13 @@ module.exports = function(grunt) {
                 src: ['gruntfile.js', 'server.js', 'app/**/*.js', 'public/js/**', 'test/**/*.js', '!test/coverage/**/*.js'],
                 options: {
                     jshintrc: true
+                }
+            }
+        },
+        sass: {
+            dist: {
+                files: {
+                    'public/css/mtg.css': 'public/sass/mtg.scss'
                 }
             }
         },
@@ -95,6 +109,7 @@ module.exports = function(grunt) {
     });
 
     //Load NPM tasks
+    grunt.loadNpmTasks('grunt-contrib-sass');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-contrib-csslint');
     grunt.loadNpmTasks('grunt-contrib-uglify');
@@ -111,9 +126,9 @@ module.exports = function(grunt) {
 
     //Default task(s).
     if (process.env.NODE_ENV === 'production') {
-        grunt.registerTask('default', ['jshint', 'csslint', 'cssmin', 'uglify', 'concurrent']);
+        grunt.registerTask('default', ['jshint', 'sass', 'csslint', 'cssmin', 'uglify', 'concurrent']);
     } else {
-        grunt.registerTask('default', ['jshint', 'csslint', 'cssmin', 'uglify', 'concurrent']);
+        grunt.registerTask('default', ['jshint', 'sass', 'csslint', 'cssmin', 'uglify', 'concurrent']);
     }
 
     //Test task.

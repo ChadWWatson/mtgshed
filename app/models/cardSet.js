@@ -8,9 +8,9 @@ var mongoose = require('mongoose'),
 
 
 /**
- * Article Schema
+ * Set Schema
  */
-var SetListSchema = new Schema({
+var CardSetSchema = new Schema({
     created: {
         type: Date,
         default: Date.now
@@ -25,27 +25,15 @@ var SetListSchema = new Schema({
         default: '',
         trim: true,
         unique: true
-    },
-    user: {
-        type: Schema.ObjectId,
-        ref: 'User'
     }
 });
 
 /**
  * Validations
  */
-SetListSchema.path('code').validate(function(code) {
+CardSetSchema.path('code').validate(function(code) {
     return code.length;
 }, 'Code cannot be blank');
 
-/**
- * Statics
- */
-SetListSchema.statics.load = function(id, cb) {
-    this.findOne({
-        _id: id
-    }).populate('user', 'name username').exec(cb);
-};
 
-mongoose.model('SetList', SetListSchema);
+mongoose.model('CardSet', CardSetSchema);

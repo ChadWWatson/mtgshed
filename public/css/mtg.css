@@ -1,0 +1,41 @@
+.svgSprite, .svgSprite-icon, .mana-zero-icon, .mana-one-icon, .mana-two-icon, .mana-three-icon, .mana-four-icon, .mana-five-icon, .mana-six-icon, .mana-seven-icon, .mana-eight-icon, .mana-nine-icon, .mana-frost-icon {
+  background-image: url("../img/Mana.svg");
+  background-repeat: no-repeat;
+  background-size: 1000%; }
+
+.svgSprite-icon, .mana-zero-icon, .mana-one-icon, .mana-two-icon, .mana-three-icon, .mana-four-icon, .mana-five-icon, .mana-six-icon, .mana-seven-icon, .mana-eight-icon, .mana-nine-icon, .mana-frost-icon {
+  height: 30px;
+  width: 30px; }
+
+.mana-zero-icon {
+  background-position: 0 0; }
+
+.mana-one-icon {
+  background-position: -30px 0; }
+
+.mana-two-icon {
+  background-position: -60px 0; }
+
+.mana-three-icon {
+  background-position: -90px 0; }
+
+.mana-four-icon {
+  background-position: -120px 0; }
+
+.mana-five-icon {
+  background-position: -150px 0; }
+
+.mana-six-icon {
+  background-position: -180px 0; }
+
+.mana-seven-icon {
+  background-position: -210px 0; }
+
+.mana-eight-icon {
+  background-position: -240px 0; }
+
+.mana-nine-icon {
+  background-position: -270px 0; }
+
+.mana-frost-icon {
+  background-position: -270px -60px; }

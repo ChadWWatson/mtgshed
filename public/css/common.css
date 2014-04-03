@@ -1,7 +1,14 @@
 .navbar .nav>li>a.brand {
     padding-left:20px;
-    margin-left:0
+    margin-left: 0;
 }
+.navbar-brand {
+    line-height: 30px;
+}
+.navbar-brand > div {
+    margin-right: 20px;
+}
+
 
 .content {
     margin-top:70px;
