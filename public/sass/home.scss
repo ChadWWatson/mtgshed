@@ -1,0 +1,26 @@
+.home {
+	.header {
+		text-align: center;
+		width: 100%;
+		background: url('../../img/background.jpg');
+		background-attachment: fixed;
+		background-size: cover;
+		color: #fff;
+		padding: 10px;
+		border-bottom: 1px solid #333;
+		overflow-y: auto;
+
+		h1 {
+			font-weight: 300;
+			margin: 40px 0;
+		}
+
+		.start-btn {
+			margin: 60px 0;
+		}
+	}
+
+	.info {
+		margin: 100px 0;
+	}
+}

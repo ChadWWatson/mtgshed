@@ -1,0 +1,12 @@
+<div class="container-fluid content">
+	<div class="row" data-ng-controller="CardSetController">
+		<div class="col-sm-3 col-md-2 sidebar" data-ng-include="'/views/admin/menu.html'"></div>
+		<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+			
+			<input type="file" file-upload multiple/>
+			<div data-ng-repeat="i in cardSet">
+				{{i.code}}
+			</div>
+		</div>
+	</div>
+</div>

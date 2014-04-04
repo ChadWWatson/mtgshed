@@ -1,3 +1,50 @@
+.navbar .nav > li > a.brand {
+  padding-left: 20px;
+  margin-left: 0; }
+
+.navbar-brand {
+  padding: 10px 15px;
+  line-height: 30px; }
+
+.navbar-brand > div {
+  margin-right: 20px; }
+
+.content {
+  margin-top: 70px;
+  width: 100%; }
+
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  height: 30px;
+  width: 100%;
+  background: #ddd;
+  -webkit-box-shadow: 0 8px 6px 6px black;
+  -moz-box-shadow: 0 8px 6px 6px black;
+  box-shadow: 0 8px 6px 6px black; }
+
+footer p {
+  padding: 5px 0 12px 10px; }
+
+.home .header {
+  text-align: center;
+  width: 100%;
+  background: url("../../img/background.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+  color: #fff;
+  padding: 10px;
+  border-bottom: 1px solid #333;
+  overflow-y: auto; }
+  .home .header h1 {
+    font-weight: 300;
+    margin: 40px 0; }
+  .home .header .start-btn {
+    margin: 60px 0; }
+.home .info {
+  margin: 100px 0; }
+
 .svgSprite, .svgSprite-icon, .mana-zero-icon, .mana-one-icon, .mana-two-icon, .mana-three-icon, .mana-four-icon, .mana-five-icon, .mana-six-icon, .mana-seven-icon, .mana-eight-icon, .mana-nine-icon, .mana-frost-icon {
   background-image: url(../../img/Mana.svg);
   background-repeat: no-repeat;
@@ -39,6 +86,10 @@
 
 .mana-frost-icon {
   background-position: -270px -60px; }
+
+html, body {
+  background-color: "#edece4" !important;
+  font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif; }
 
 .content {
   margin-top: 50px; }

@@ -13,8 +13,8 @@ angular.module('mtgshed').config(['$stateProvider', '$urlRouterProvider',
         templateUrl: 'views/admin/index.html'
     })
       .state('list sets', {
-        url: '/admin/setlists',
-        templateUrl: 'views/setlists/list.html'
+        url: '/admin/sets/manage',
+        templateUrl: 'views/admin/set-update.html'
     })
       .state('create article', {
         url: '/articles/create',
