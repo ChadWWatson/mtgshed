@@ -1,12 +1,32 @@
-<div class="container-fluid content">
+<div class="container-fluid content admin">
 	<div class="row" data-ng-controller="CardSetController">
 		<div class="col-sm-3 col-md-2 sidebar" data-ng-include="'/views/admin/menu.html'"></div>
 		<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
 			
 			<input type="file" file-upload multiple/>
-			<div data-ng-repeat="i in cardSet">
-				{{i.code}}
-			</div>
+
+			<h2 class="pull-left">Uploaded Set Info</h2>
+			<button class="btn btn-primary pull-right upload-btn" ng-click="updateSet()">Upload</button>	
+			<div class="table-responsive">
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th>Card Set</th>
+                  <th>Release Date</th>
+                  <th>Type</th>
+                  <th>Card Count</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr data-ng-repeat="i in cardSet">
+                  <td>{{i.code}} - {{i.name}}</td>
+                  <td>{{i.releaseDate | date:'yyyy-MM-dd'}}</td>
+                  <td>{{i.type}}</td>
+                  <td>{{i.cards.length}}</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
 		</div>
 	</div>
 </div>

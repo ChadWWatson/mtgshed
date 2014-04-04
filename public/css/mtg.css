@@ -45,6 +45,10 @@ footer p {
 .home .info {
   margin: 100px 0; }
 
+.admin .upload-btn {
+  margin-top: 20px;
+  margin-bottom: 10px; }
+
 .svgSprite, .svgSprite-icon, .mana-zero-icon, .mana-one-icon, .mana-two-icon, .mana-three-icon, .mana-four-icon, .mana-five-icon, .mana-six-icon, .mana-seven-icon, .mana-eight-icon, .mana-nine-icon, .mana-frost-icon {
   background-image: url(../../img/Mana.svg);
   background-repeat: no-repeat;

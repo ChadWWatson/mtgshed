@@ -11,10 +11,18 @@ var mongoose = require('mongoose'),
  * Set Schema
  */
 var CardSetSchema = new Schema({
-    created: {
-        type: Date,
-        default: Date.now
+    booster: [String],
+    border: {
+        type: String,
+        default: '',
+        trim: true
     },
+    gathererCode: {
+        type: String,
+        default: '',
+        trim: true
+    },
+    releaseDate: Date,
     name: {
         type: String,
         default: '',
