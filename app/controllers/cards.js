@@ -39,6 +39,15 @@
         res.jsonp(cards);
     });
 };
+ exports.byMultiverseId = function(req, res) {
+    res.charset = 'UTF8';
+    Card.find({ multiverseid: req.params.mid }, function(error, cards){
+        console.log(error);
+        res.jsonp(cards);
+    });
+};
+
+
 
 /**
  * List of CardSet

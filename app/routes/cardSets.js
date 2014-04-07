@@ -20,6 +20,7 @@ module.exports = function(app) {
     app.post('/api/sets/:code/cards', authorization.requiresLogin, isAdminUser, cards.create);
     app.get('/api/sets/:code/cards', cards.all);
     app.get('/api/cards/name/:name', cards.byName);
+    app.get('/api/cards/:mid', cards.byMultiverseId);
     // Finish with setting up the articleId param
     //app.param('articleId', articles.article);
 

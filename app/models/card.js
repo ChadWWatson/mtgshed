@@ -77,6 +77,10 @@ var CardSchema = new Schema({
     cardSet: {type: Schema.ObjectId, ref: 'CardSetSchema'}
 });
 
+CardSchema.virtual('imageUrl').get(function () {
+  return 'http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=' + this.multiverseid + '&type=card';
+});
+
 CardSchema.statics.load = function(id, cb) {
     this.findOne({
         _id: id
