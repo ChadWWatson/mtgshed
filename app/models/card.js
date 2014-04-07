@@ -78,7 +78,7 @@ var CardSchema = new Schema({
 });
 
 CardSchema.virtual('imageUrl').get(function() {
-  return 'http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=' + this.multiverseid + '&type=card';
+  return '//gatherer.wizards.com/Handlers/Image.ashx?multiverseid=' + this.multiverseid + '&type=card';
 });
 
 CardSchema.statics.load = function(id, cb) {

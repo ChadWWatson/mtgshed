@@ -34,7 +34,7 @@
  exports.byName = function(req, res) {
     res.charset = 'UTF8';
     console.log(req.params.name);
-    Card.find({ name: req.params.name }, function(error, cards){
+    Card.find({ name: new RegExp(req.params.name,'i') }, function(error, cards){
         console.log(error);
         res.jsonp(cards);
     });
