@@ -40,7 +40,7 @@ var CardSchema = new Schema({
         default: '',
         trim: true
     },
-    multiversid: Number,
+    multiverseid: Number,
     name: {
         type: String,
         default: '',
@@ -73,10 +73,8 @@ var CardSchema = new Schema({
         trim: true
     },
     types: [String],
-    cardSet: {
-        type: Schema.ObjectId,
-        ref: 'CardSet'
-    }
+    supertypes: [String],
+    cardSet: {type: Schema.ObjectId, ref: 'CardSetSchema'}
 });
 
 CardSchema.statics.load = function(id, cb) {

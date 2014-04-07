@@ -6,7 +6,7 @@
 			<input type="file" file-upload multiple/>
 
 			<h2 class="pull-left">Uploaded Set Info</h2>
-			<button class="btn btn-primary pull-right upload-btn" ng-click="updateSet()">Upload</button>	
+			<button class="btn btn-primary pull-right upload-btn disabled" ng-click="updateSet()">Upload</button>	
 			<div class="table-responsive">
             <table class="table table-striped">
               <thead>
@@ -15,6 +15,7 @@
                   <th>Release Date</th>
                   <th>Type</th>
                   <th>Card Count</th>
+                  <th></th> 
                 </tr>
               </thead>
               <tbody>
@@ -23,6 +24,9 @@
                   <td>{{i.releaseDate | date:'yyyy-MM-dd'}}</td>
                   <td>{{i.type}}</td>
                   <td>{{i.cards.length}}</td>
+                  <td>
+                    <button class="btn btn-xs btn-primary" ng-click="updateCardSet(i, $event)">save</button>
+                  </td>
                 </tr>
               </tbody>
             </table>

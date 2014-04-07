@@ -6,7 +6,6 @@ angular.module('mtgshed.admin').controller('CardSetController', ['$scope', '$htt
 
     $scope.find = function() {
         SetLists.query(function(sets) {
-            console.log(sets);
             $scope.sets = sets;
         });
     };
@@ -21,11 +20,12 @@ angular.module('mtgshed.admin').controller('CardSetController', ['$scope', '$htt
         }
         angular.forEach(setCodes, function(code, key){
             $http.post('/api/sets', $scope.cardSet[code])
-            .success(function(data, status, headers, config) {
+            .success(function(data) {
                 count++;
                 $scope.currentUpdatedMessage = 'Updating ' + code + ' ( ' + count + ' of ' + setCodes.length + ')';
-                console.log($scope.currentUpdatedMessage);  
-            }).error(function(data, status, headers, config) {
+                console.log($scope.currentUpdatedMessage);
+                $scope.addCardsToSet(code,$scope.cardSet[code].cards);  
+            }).error(function(data, status) {
                 $scope.status = status;
             });
         });
@@ -56,13 +56,32 @@ angular.module('mtgshed.admin').controller('CardSetController', ['$scope', '$htt
         fileReader.readAsText($scope.file, $scope)
         .then(function(result) {
             $scope.cardSet = JSON.parse(result);
-            console.log($scope.cardSet);
         });
     };
 
     $scope.$on('fileProgress', function(e, progress) {
         $scope.progress = progress.loaded / progress.total;
-        console.log($scope.progress);
     });
+
+    $scope.addCardsToSet = function(code, cards, completed) {
+        $http.post('/api/sets/' + code + '/cards', $scope.cardSet[code].cards)
+        .success(function(data) {
+            completed(null,data);
+        }).error(function(data, status) {
+            completed(data,null);
+        });
+    };
+
+    $scope.updateCardSet = function(cardset, $event) {
+        var button = angular.element($event.target);
+        button.html('saving...').addClass('disabled');
+        var cardSet = new SetLists(cardset);
+        cardSet.$save(function(response) {
+            button.html('saving cards...');
+            $scope.addCardsToSet(cardset.code, cardset. cards, function(e,data){
+                button.removeClass('btn-primary').addClass('btn-success').addClass('disabled').html('completed');
+            });
+        });
+    };
 
 }]);
