@@ -1,0 +1,28 @@
+<div class="container-fluid content" data-ng-controller="InventoryController" ng-init="findOne()">
+	<div class="row">
+		<div class="col-md-12 col-lg-12" id="box-list" data-ng-show="isViewingList">
+			<h1>{{box.name}}</h1>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+			<h3>Card List</h3>
+			<input class="form-control" type="text" ng-model="cardSearchValue" placeholder="search">
+			<ul>
+				<li data-ng-repeat="card in serverCards">
+					<div class="row">
+						<div class="col-4">{{card.name}}</div>
+						<div class="col-4">{{card.cardSet.code}}</div>
+						<div class="col-4">{{card.manaCost}}</div>
+						<div class="col-4">
+							<img src="//{{card.imageUrl}}" alt="{{card.name"}} />
+						</div>
+					</div>	
+				</li>
+			</ul>
+		</div>	
+		<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+			<h3>My Cards</h3>
+		</div>	
+	</div>
+</div>

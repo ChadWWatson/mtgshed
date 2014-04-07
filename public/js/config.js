@@ -28,6 +28,26 @@ angular.module('mtgshed').config(['$stateProvider', '$urlRouterProvider',
         url: '/articles/:articleId',
         templateUrl: 'views/articles/view.html'
     })
+      .state('dashboard sets', {
+        url: '/dashboard/sets',
+        templateUrl: 'views/dashboard/sets.html'
+    })
+      .state('dashboard cards', {
+        url: '/dashboard/my-cards',
+        templateUrl: 'views/dashboard/cards.html'
+    })
+      .state('dashboard decks', {
+        url: '/dashboard/decks',
+        templateUrl: 'views/dashboard/decks.html'
+    })
+      .state('dashboard', {
+        url: '/dashboard',
+        templateUrl: 'views/dashboard/index.html'
+    })
+      .state('edit inventory', {
+        url: '/dashboard/inventory/:inventoryId',
+        templateUrl: 'views/inventory/index.html'
+    })
       .state('home', {
         url: '/',
         templateUrl: 'views/index.html'
