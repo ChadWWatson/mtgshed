@@ -74,7 +74,7 @@ var CardSchema = new Schema({
     },
     types: [String],
     supertypes: [String],
-    cardSet: {type: Schema.ObjectId, ref: 'CardSetSchema'}
+    cardSet: {type: Schema.ObjectId, ref: 'CardSet'}
 });
 
 CardSchema.virtual('imageUrl').get(function() {
@@ -87,6 +87,6 @@ CardSchema.statics.load = function(id, cb) {
     }).populate('cardSet', 'code name').exec(cb);
 };
 
-CardSchema.set('toJSON', { getters: true, virtuals: true });
+CardSchema.set('toJSON', { getters: false, virtuals: true });
 
 mongoose.model('Card', CardSchema);
