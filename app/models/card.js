@@ -77,7 +77,7 @@ var CardSchema = new Schema({
     cardSet: {type: Schema.ObjectId, ref: 'CardSetSchema'}
 });
 
-CardSchema.virtual('imageUrl').get(function () {
+CardSchema.virtual('imageUrl').get(function() {
   return 'http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=' + this.multiverseid + '&type=card';
 });
 
@@ -86,5 +86,7 @@ CardSchema.statics.load = function(id, cb) {
         _id: id
     }).populate('cardSet', 'code name').exec(cb);
 };
+
+CardSchema.set('toJSON', { getters: true, virtuals: true });
 
 mongoose.model('Card', CardSchema);
