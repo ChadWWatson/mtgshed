@@ -18,7 +18,6 @@ angular.module('mtgshed.dashboard').controller('DashboardController', ['$scope',
         });
         box.$save(function(response) {
     		$scope.isViewingList = true;
-    		console.log(response);
     		$scope.boxes.push(response);
         });
     };
