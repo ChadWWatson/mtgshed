@@ -47,7 +47,7 @@ exports.all = function(req, res) {
 };
 
 exports.byUser = function(req, res) {
-	Inventory.find({user: req.params.userId}).populate('_cards').exec(function(error, inventories){
+	Inventory.find({user: req.params.userId}).exec(function(error, inventories){
 		res.jsonp(inventories);
 	});
 };

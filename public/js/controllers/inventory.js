@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('mtgshed.dashboard').controller('InventoryController', ['$scope', '$stateParams', '$location', 'Global', 'SetLists', 'fileReader', 'Inventory', 'Cards', function ($scope, $stateParams, $location, Global, SetLists, fileReader, Inventory, Cards) {
+angular.module('mtgshed.dashboard').controller('InventoryController', ['$scope', '$http', '$stateParams', '$location', 'Global', 'SetLists', 'fileReader', 'Inventory', 'Cards', function ($scope, $http, $stateParams, $location, Global, SetLists, fileReader, Inventory, Cards) {
 	$scope.global = Global;
 	$scope.isViewingList = true;
 	$scope.box = {};
@@ -14,35 +14,53 @@ angular.module('mtgshed.dashboard').controller('InventoryController', ['$scope',
 			id: $stateParams.inventoryId
 		}, function(box) {
 			$scope.box = box;
-			console.log(box);
 		});
 	};
 
 	$scope.selectCard = function(card) {
 		$scope.currentCard = card;
+		
+		window.scrollTo(0,0);
 	};
 
 
 	$scope.addToBox = function() {
-		$scope.box.cards.push($scope.currentCard);
-		console.log($scope.box.cards);
+		$http.post('/api/inventory/' + $stateParams.inventoryId + '/cards',{cardId: $scope.currentCard._id})
+			.success(function(card){
+				if(card !== null) {
+					$scope.box.cards.push($scope.currentCard);
+				}
+			}).
+			error(function(error) {
+				console.log(error);
+			});
 	};
 
-	$scope.$watch('currentCard', function(newValue) {
-		if (newValue !== {}) {
-			console.log(newValue);
-		}
-	});
-
-	$scope.$watch('cardSearchValue', function(newValue) {
-		if (newValue.length > 0) {
-			$scope.isLoading = true;
-			Cards.byName({ name: newValue},function(cards) {
-				if ( newValue === $scope.cardSearchValue) {
+	function dataRequest() {
+		Cards
+			.byName({ name: $scope.searchValue},function(cards) {
+				if ( $scope.searchValue === $scope.cardSearchValue) {
 					$scope.isLoading = false;
 					$scope.serverCards = cards;
 				}
 			});
+	}
+
+	function delayRequest() {
+		if(delayRequest.timeout) {
+			clearTimeout(delayRequest.timeout);
+		}
+		delayRequest.timeout = setTimeout(function() {
+				dataRequest();
+			}, 300); // 200ms delay
+	}
+
+	$scope.$watch('cardSearchValue', function(newValue) {
+		if (newValue.length > 1) {
+			$scope.searchValue = newValue;
+			$scope.isLoading = true;
+			$scope.serverCards = [];
+			delayRequest();
 		}
 	});
 }]);

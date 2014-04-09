@@ -5,7 +5,7 @@
 		</div>
 	</div>
 	<div class="row">
-		<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+		<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
 			<h3>Card List</h3>
 			<input class="form-control" type="text" ng-model="cardSearchValue" placeholder="search">
 			<div class="loading-spiner-holder" data-loading ng-show="isLoading"><div class="loading-spiner"><img src="img/loaders/loader.gif" /></div></div>
@@ -22,28 +22,58 @@
 						<tr data-ng-repeat="card in serverCards" ng-click="selectCard(card)">
 							<td>{{card.name}}</td>
 							<td>{{card.cardSet.name}}</td>
-							<td>{{card.manaCost}}</td>
+							<td>
+								<div mana-cost style="display: inline-block" value="{{card.manaCost}}"></div>
+							</td>
 						</tr>
 					</tbody>
 				</table>
 			</div>
 		</div>	
-		<div class="col-xs-12 col-sm-12 col-md-2 col-md-offset-1 col-lg-2 col-lg-offset-1">
+		<div class="col-xs-12 col-sm-4 col-md-3 col-lg-2 col-lg-offset-1">
 			<h3>Card Info</h3>
 			<div class="row card-info" ng-show="currentCard">
-				<div class="col-sm-12 image">
+				<div class="col-sm-12 image clearfix">
 					<img class="img-responsive" alt="{{curentCard.name}}" src="//{{currentCard.imageUrl}}" />
 				</div>
-				<div class="col-sm-12 name" ng-model="currentCard.name">
-					{{currentCard.name}}
+				<div class="detail">
+					<div class="col-sm-12 name" ng-model="currentCard.name">
+						<label>Name: </label>{{currentCard.name}}
+					</div>
+					<div class="col-sm-12 mana" ng-model="currentCard.name">
+						<label>Mana Cost: </label><div mana-cost style="display: inline-block" value="{{currentCard.manaCost}}"></div>
+					</div>
+					<div class="col-sm-12 type" ng-model="currentCard.name">
+						<label>Card Type: </label>{{currentCard.type}}
+					</div>
 				</div>
 				<div class="col-sm-12 actions">
-					<button class="btn btn-primary" ng-click="addToBox()"><span class="glyphicon glyphicon-plus"></span> Add</button>
+					<button class="btn btn-primary btn-xs" ng-click="addToBox()"><span class="glyphicon glyphicon-plus"></span> Add</button>
 				</div>
 			</div>
 		</div>		
-		<div class="col-xs-12 col-sm-12 col-md-4 col-md-offset-1 col-lg-4 col-lg-offset-1">
+		<div class="col-xs-12 col-sm-4 col-md-5 col-lg-4 col-lg-offset-1">
 			<h3>My Cards</h3>
+			<div class="table-responsive" ng-show="box.cards.length > 0">
+				<table class="table table-striped table-hover card-search">
+					<thead>
+						<tr>
+							<th>Name</th>
+							<th>Card Set</th>
+							<th>Mana Cost</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr data-ng-repeat="card in box.cards" ng-click="">
+							<td>{{card.name}}</td>
+							<td>{{card.cardSet.name}}</td>
+							<td>
+								<div mana-cost style="display: inline-block" value="{{card.manaCost}}"></div>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
 		</div>	
 	</div>
 </div>

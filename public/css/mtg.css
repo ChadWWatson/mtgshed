@@ -53,47 +53,550 @@ table.card-search {
   cursor: pointer;
   font-size: 12px; }
 
-.svgSprite, .svgSprite-icon, .mana-zero-icon, .mana-one-icon, .mana-two-icon, .mana-three-icon, .mana-four-icon, .mana-five-icon, .mana-six-icon, .mana-seven-icon, .mana-eight-icon, .mana-nine-icon, .mana-frost-icon {
+.card-info {
+  font-size: 10px; }
+  .card-info label {
+    width: 60px; }
+  .card-info .name {
+    margin-top: 20px; }
+  .card-info .type {
+    margin-bottom: 20px; }
+
+.svgSprite, .mana-0-icon, .mana-1-icon, .mana-2-icon, .mana-3-icon, .mana-4-icon, .mana-5-icon, .mana-6-icon, .mana-7-icon, .mana-8-icon, .mana-9-icon, .mana-10-icon, .mana-11-icon, .mana-12-icon, .mana-13-icon, .mana-14-icon, .mana-15-icon, .mana-16-icon, .mana-17-icon, .mana-18-icon, .mana-19-icon, .mana-20-icon, .mana-X-icon, .mana-Y-icon, .mana-Z-icon, .mana-W-icon, .mana-U-icon, .mana-B-icon, .mana-R-icon, .mana-G-icon, .mana-S-icon, .mana-WU-icon, .mana-WB-icon, .mana-UB-icon, .mana-UR-icon, .mana-BR-icon, .mana-BG-icon, .mana-RW-icon, .mana-RG-icon, .mana-GW-icon, .mana-GU-icon, .mana-2W-icon, .mana-2U-icon, .mana-2B-icon, .mana-2R-icon, .mana-2G-icon, .mana-PW-icon, .mana-PU-icon, .mana-PB-icon, .mana-PR-icon, .mana-PG-icon, .mana-T-icon, .mana-Q-icon, .mana-I-icon, .mana-0-icon-xs, .mana-1-icon-xs, .mana-2-icon-xs, .mana-3-icon-xs, .mana-4-icon-xs, .mana-5-icon-xs, .mana-6-icon-xs, .mana-7-icon-xs, .mana-8-icon-xs, .mana-9-icon-xs, .mana-10-icon-xs, .mana-11-icon-xs, .mana-12-icon-xs, .mana-13-icon-xs, .mana-14-icon-xs, .mana-15-icon-xs, .mana-16-icon-xs, .mana-17-icon-xs, .mana-18-icon-xs, .mana-19-icon-xs, .mana-20-icon-xs, .mana-X-icon-xs, .mana-Y-icon-xs, .mana-Z-icon-xs, .mana-W-icon-xs, .mana-U-icon-xs, .mana-B-icon-xs, .mana-R-icon-xs, .mana-G-icon-xs, .mana-S-icon-xs, .mana-WU-icon-xs, .mana-WB-icon-xs, .mana-UB-icon-xs, .mana-UR-icon-xs, .mana-BR-icon-xs, .mana-BG-icon-xs, .mana-RW-icon-xs, .mana-RG-icon-xs, .mana-GW-icon-xs, .mana-GU-icon-xs, .mana-2W-icon-xs, .mana-2U-icon-xs, .mana-2B-icon-xs, .mana-2R-icon-xs, .mana-2G-icon-xs, .mana-PW-icon-xs, .mana-PU-icon-xs, .mana-PB-icon-xs, .mana-PR-icon-xs, .mana-PG-icon-xs, .mana-T-icon-xs, .mana-Q-icon-xs, .mana-I-icon-xs {
   background-image: url(../../img/Mana.svg);
   background-repeat: no-repeat;
-  background-size: 1000%; }
+  background-size: 1000%;
+  display: inline-block; }
 
-.svgSprite-icon, .mana-zero-icon, .mana-one-icon, .mana-two-icon, .mana-three-icon, .mana-four-icon, .mana-five-icon, .mana-six-icon, .mana-seven-icon, .mana-eight-icon, .mana-nine-icon, .mana-frost-icon {
+.mana-0-icon {
   height: 30px;
-  width: 30px; }
+  width: 30px;
+  background-position: 0px 0px; }
 
-.mana-zero-icon {
-  background-position: 0 0; }
+.mana-1-icon {
+  height: 30px;
+  width: 30px;
+  background-position: -30px 0px; }
 
-.mana-one-icon {
-  background-position: -30px 0; }
+.mana-2-icon {
+  height: 30px;
+  width: 30px;
+  background-position: -60px 0px; }
 
-.mana-two-icon {
-  background-position: -60px 0; }
+.mana-3-icon {
+  height: 30px;
+  width: 30px;
+  background-position: -90px 0px; }
 
-.mana-three-icon {
-  background-position: -90px 0; }
+.mana-4-icon {
+  height: 30px;
+  width: 30px;
+  background-position: -120px 0px; }
 
-.mana-four-icon {
-  background-position: -120px 0; }
+.mana-5-icon {
+  height: 30px;
+  width: 30px;
+  background-position: -150px 0px; }
 
-.mana-five-icon {
-  background-position: -150px 0; }
+.mana-6-icon {
+  height: 30px;
+  width: 30px;
+  background-position: -180px 0px; }
 
-.mana-six-icon {
-  background-position: -180px 0; }
+.mana-7-icon {
+  height: 30px;
+  width: 30px;
+  background-position: -210px 0px; }
 
-.mana-seven-icon {
-  background-position: -210px 0; }
+.mana-8-icon {
+  height: 30px;
+  width: 30px;
+  background-position: -240px 0px; }
 
-.mana-eight-icon {
-  background-position: -240px 0; }
+.mana-9-icon {
+  height: 30px;
+  width: 30px;
+  background-position: -270px 0px; }
 
-.mana-nine-icon {
-  background-position: -270px 0; }
+.mana-10-icon {
+  height: 30px;
+  width: 30px;
+  background-position: 0px -30px; }
 
-.mana-frost-icon {
+.mana-11-icon {
+  height: 30px;
+  width: 30px;
+  background-position: -30px -30px; }
+
+.mana-12-icon {
+  height: 30px;
+  width: 30px;
+  background-position: -60px -30px; }
+
+.mana-13-icon {
+  height: 30px;
+  width: 30px;
+  background-position: -90px -30px; }
+
+.mana-14-icon {
+  height: 30px;
+  width: 30px;
+  background-position: -120px -30px; }
+
+.mana-15-icon {
+  height: 30px;
+  width: 30px;
+  background-position: -150px -30px; }
+
+.mana-16-icon {
+  height: 30px;
+  width: 30px;
+  background-position: -180px -30px; }
+
+.mana-17-icon {
+  height: 30px;
+  width: 30px;
+  background-position: -210px -30px; }
+
+.mana-18-icon {
+  height: 30px;
+  width: 30px;
+  background-position: -240px -30px; }
+
+.mana-19-icon {
+  height: 30px;
+  width: 30px;
+  background-position: -270px -30px; }
+
+.mana-20-icon {
+  height: 30px;
+  width: 30px;
+  background-position: 0px -60px; }
+
+.mana-X-icon {
+  height: 30px;
+  width: 30px;
+  background-position: -30px -60px; }
+
+.mana-Y-icon {
+  height: 30px;
+  width: 30px;
+  background-position: -60px -60px; }
+
+.mana-Z-icon {
+  height: 30px;
+  width: 30px;
+  background-position: -90px -60px; }
+
+.mana-W-icon {
+  height: 30px;
+  width: 30px;
+  background-position: -120px -60px; }
+
+.mana-U-icon {
+  height: 30px;
+  width: 30px;
+  background-position: -150px -60px; }
+
+.mana-B-icon {
+  height: 30px;
+  width: 30px;
+  background-position: -180px -60px; }
+
+.mana-R-icon {
+  height: 30px;
+  width: 30px;
+  background-position: -210px -60px; }
+
+.mana-G-icon {
+  height: 30px;
+  width: 30px;
+  background-position: -240px -60px; }
+
+.mana-S-icon {
+  height: 30px;
+  width: 30px;
   background-position: -270px -60px; }
+
+.mana-WU-icon {
+  height: 30px;
+  width: 30px;
+  background-position: 0px -90px; }
+
+.mana-WB-icon {
+  height: 30px;
+  width: 30px;
+  background-position: -30px -90px; }
+
+.mana-UB-icon {
+  height: 30px;
+  width: 30px;
+  background-position: -60px -90px; }
+
+.mana-UR-icon {
+  height: 30px;
+  width: 30px;
+  background-position: -90px -90px; }
+
+.mana-BR-icon {
+  height: 30px;
+  width: 30px;
+  background-position: -120px -90px; }
+
+.mana-BG-icon {
+  height: 30px;
+  width: 30px;
+  background-position: -150px -90px; }
+
+.mana-RW-icon {
+  height: 30px;
+  width: 30px;
+  background-position: -180px -90px; }
+
+.mana-RG-icon {
+  height: 30px;
+  width: 30px;
+  background-position: -210px -90px; }
+
+.mana-GW-icon {
+  height: 30px;
+  width: 30px;
+  background-position: -240px -90px; }
+
+.mana-GU-icon {
+  height: 30px;
+  width: 30px;
+  background-position: -270px -90px; }
+
+.mana-2W-icon {
+  height: 30px;
+  width: 30px;
+  background-position: 0px -120px; }
+
+.mana-2U-icon {
+  height: 30px;
+  width: 30px;
+  background-position: -30px -120px; }
+
+.mana-2B-icon {
+  height: 30px;
+  width: 30px;
+  background-position: -60px -120px; }
+
+.mana-2R-icon {
+  height: 30px;
+  width: 30px;
+  background-position: -90px -120px; }
+
+.mana-2G-icon {
+  height: 30px;
+  width: 30px;
+  background-position: -120px -120px; }
+
+.mana-PW-icon {
+  height: 30px;
+  width: 30px;
+  background-position: -150px -120px; }
+
+.mana-PU-icon {
+  height: 30px;
+  width: 30px;
+  background-position: -180px -120px; }
+
+.mana-PB-icon {
+  height: 30px;
+  width: 30px;
+  background-position: -210px -120px; }
+
+.mana-PR-icon {
+  height: 30px;
+  width: 30px;
+  background-position: -240px -120px; }
+
+.mana-PG-icon {
+  height: 30px;
+  width: 30px;
+  background-position: -270px -120px; }
+
+.mana-T-icon {
+  height: 30px;
+  width: 30px;
+  background-position: 0px -120px; }
+
+.mana-Q-icon {
+  height: 30px;
+  width: 30px;
+  background-position: -30px -120px; }
+
+.mana-I-icon {
+  height: 30px;
+  width: 30px;
+  background-position: -60px -120px; }
+
+.mana-0-icon-xs {
+  height: 15px;
+  width: 15px;
+  background-position: 0px 0px; }
+
+.mana-1-icon-xs {
+  height: 15px;
+  width: 15px;
+  background-position: -15px 0px; }
+
+.mana-2-icon-xs {
+  height: 15px;
+  width: 15px;
+  background-position: -30px 0px; }
+
+.mana-3-icon-xs {
+  height: 15px;
+  width: 15px;
+  background-position: -45px 0px; }
+
+.mana-4-icon-xs {
+  height: 15px;
+  width: 15px;
+  background-position: -60px 0px; }
+
+.mana-5-icon-xs {
+  height: 15px;
+  width: 15px;
+  background-position: -75px 0px; }
+
+.mana-6-icon-xs {
+  height: 15px;
+  width: 15px;
+  background-position: -90px 0px; }
+
+.mana-7-icon-xs {
+  height: 15px;
+  width: 15px;
+  background-position: -105px 0px; }
+
+.mana-8-icon-xs {
+  height: 15px;
+  width: 15px;
+  background-position: -120px 0px; }
+
+.mana-9-icon-xs {
+  height: 15px;
+  width: 15px;
+  background-position: -135px 0px; }
+
+.mana-10-icon-xs {
+  height: 15px;
+  width: 15px;
+  background-position: 0px -15px; }
+
+.mana-11-icon-xs {
+  height: 15px;
+  width: 15px;
+  background-position: -15px -15px; }
+
+.mana-12-icon-xs {
+  height: 15px;
+  width: 15px;
+  background-position: -30px -15px; }
+
+.mana-13-icon-xs {
+  height: 15px;
+  width: 15px;
+  background-position: -45px -15px; }
+
+.mana-14-icon-xs {
+  height: 15px;
+  width: 15px;
+  background-position: -60px -15px; }
+
+.mana-15-icon-xs {
+  height: 15px;
+  width: 15px;
+  background-position: -75px -15px; }
+
+.mana-16-icon-xs {
+  height: 15px;
+  width: 15px;
+  background-position: -90px -15px; }
+
+.mana-17-icon-xs {
+  height: 15px;
+  width: 15px;
+  background-position: -105px -15px; }
+
+.mana-18-icon-xs {
+  height: 15px;
+  width: 15px;
+  background-position: -120px -15px; }
+
+.mana-19-icon-xs {
+  height: 15px;
+  width: 15px;
+  background-position: -135px -15px; }
+
+.mana-20-icon-xs {
+  height: 15px;
+  width: 15px;
+  background-position: 0px -30px; }
+
+.mana-X-icon-xs {
+  height: 15px;
+  width: 15px;
+  background-position: -15px -30px; }
+
+.mana-Y-icon-xs {
+  height: 15px;
+  width: 15px;
+  background-position: -30px -30px; }
+
+.mana-Z-icon-xs {
+  height: 15px;
+  width: 15px;
+  background-position: -45px -30px; }
+
+.mana-W-icon-xs {
+  height: 15px;
+  width: 15px;
+  background-position: -60px -30px; }
+
+.mana-U-icon-xs {
+  height: 15px;
+  width: 15px;
+  background-position: -75px -30px; }
+
+.mana-B-icon-xs {
+  height: 15px;
+  width: 15px;
+  background-position: -90px -30px; }
+
+.mana-R-icon-xs {
+  height: 15px;
+  width: 15px;
+  background-position: -105px -30px; }
+
+.mana-G-icon-xs {
+  height: 15px;
+  width: 15px;
+  background-position: -120px -30px; }
+
+.mana-S-icon-xs {
+  height: 15px;
+  width: 15px;
+  background-position: -135px -30px; }
+
+.mana-WU-icon-xs {
+  height: 15px;
+  width: 15px;
+  background-position: 0px -45px; }
+
+.mana-WB-icon-xs {
+  height: 15px;
+  width: 15px;
+  background-position: -15px -45px; }
+
+.mana-UB-icon-xs {
+  height: 15px;
+  width: 15px;
+  background-position: -30px -45px; }
+
+.mana-UR-icon-xs {
+  height: 15px;
+  width: 15px;
+  background-position: -45px -45px; }
+
+.mana-BR-icon-xs {
+  height: 15px;
+  width: 15px;
+  background-position: -60px -45px; }
+
+.mana-BG-icon-xs {
+  height: 15px;
+  width: 15px;
+  background-position: -75px -45px; }
+
+.mana-RW-icon-xs {
+  height: 15px;
+  width: 15px;
+  background-position: -90px -45px; }
+
+.mana-RG-icon-xs {
+  height: 15px;
+  width: 15px;
+  background-position: -105px -45px; }
+
+.mana-GW-icon-xs {
+  height: 15px;
+  width: 15px;
+  background-position: -120px -45px; }
+
+.mana-GU-icon-xs {
+  height: 15px;
+  width: 15px;
+  background-position: -135px -45px; }
+
+.mana-2W-icon-xs {
+  height: 15px;
+  width: 15px;
+  background-position: 0px -60px; }
+
+.mana-2U-icon-xs {
+  height: 15px;
+  width: 15px;
+  background-position: -15px -60px; }
+
+.mana-2B-icon-xs {
+  height: 15px;
+  width: 15px;
+  background-position: -30px -60px; }
+
+.mana-2R-icon-xs {
+  height: 15px;
+  width: 15px;
+  background-position: -45px -60px; }
+
+.mana-2G-icon-xs {
+  height: 15px;
+  width: 15px;
+  background-position: -60px -60px; }
+
+.mana-PW-icon-xs {
+  height: 15px;
+  width: 15px;
+  background-position: -75px -60px; }
+
+.mana-PU-icon-xs {
+  height: 15px;
+  width: 15px;
+  background-position: -90px -60px; }
+
+.mana-PB-icon-xs {
+  height: 15px;
+  width: 15px;
+  background-position: -105px -60px; }
+
+.mana-PR-icon-xs {
+  height: 15px;
+  width: 15px;
+  background-position: -120px -60px; }
+
+.mana-PG-icon-xs {
+  height: 15px;
+  width: 15px;
+  background-position: -135px -60px; }
+
+.mana-T-icon-xs {
+  height: 15px;
+  width: 15px;
+  background-position: 0px -60px; }
+
+.mana-Q-icon-xs {
+  height: 15px;
+  width: 15px;
+  background-position: -15px -60px; }
+
+.mana-I-icon-xs {
+  height: 15px;
+  width: 15px;
+  background-position: -30px -60px; }
 
 html, body {
   background-color: "#edece4" !important;

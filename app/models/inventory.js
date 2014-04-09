@@ -23,7 +23,7 @@ var InventorySchema = new Schema({
 InventorySchema.statics.load = function(id, cb) {
     this.findOne({
         _id: id
-    }).populate('user', 'name').populate('cards').exec(cb);
+    }).populate('user', 'name').populate([{ path: 'cards'}, { path: 'cards.cardSet', model: 'CardSet'}]).exec(cb);
 };
 
 mongoose.model('Inventory', InventorySchema);

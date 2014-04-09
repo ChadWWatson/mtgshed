@@ -5,7 +5,7 @@ angular.module('mtgshed.system').factory('Global', [
     function() {
         var _this = this;
         var isAdmin = false;
-        if ( window.user !== undefined ) {
+        if ( window.user !== null && window.user !== undefined ) {
             isAdmin = window.user.isAdmin;
         }
         _this._data = {
@@ -13,7 +13,6 @@ angular.module('mtgshed.system').factory('Global', [
             authenticated: !! window.user,
             isAdmin: isAdmin
         };
-        console.log(_this._data);
         return _this._data;
     }
 ]);

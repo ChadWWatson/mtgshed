@@ -10,7 +10,7 @@ var mongoose = require('mongoose'),
  * Auth callback
  */
 exports.authCallback = function(req, res) {
-    res.redirect('/');
+    res.redirect('/#!/dashboard');
 };
 
 /**
@@ -45,7 +45,7 @@ exports.signout = function(req, res) {
  * Session
  */
 exports.session = function(req, res) {
-    res.redirect('/');
+    res.redirect('/#!/dashboard');
 };
 
 /**
@@ -74,7 +74,7 @@ exports.create = function(req, res, next) {
         }
         req.logIn(user, function(err) {
             if (err) return next(err);
-            return res.redirect('/');
+            return res.redirect('/#!/dashboard');
         });
     });
 };

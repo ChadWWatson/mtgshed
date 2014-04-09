@@ -26,6 +26,7 @@ exports.create = function(req, res) {
 };
 
 exports.byName = function(req, res) {
+	res.setHeader('Cache-Control', 'public, max-age=2592000');
 	res.charset = 'UTF8';
 	console.log(req.params.name);
 	Card.find({ name: new RegExp(req.params.name,'i') }).sort('-name').populate('cardSet', 'code name').exec(function(error, cards){
