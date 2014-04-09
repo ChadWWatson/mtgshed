@@ -1,18 +1,9 @@
 'use strict';
-
-/**
- * Module dependencies.
- */
 var mongoose = require('mongoose'),
-    Schema = mongoose.Schema,
-    Card = mongoose.model('Card');
+    Schema = mongoose.Schema;
 
-
-/**
- * Card Schema
- */
 var InventorySchema = new Schema({
-    cards: [Card],
+    cards: [{ type: Schema.ObjectId, ref: 'Card' }],
     created: {
         type: Date,
         default: Date.now
@@ -29,11 +20,10 @@ var InventorySchema = new Schema({
     user: {type: Schema.ObjectId, ref: 'User'}
 });
 
-
 InventorySchema.statics.load = function(id, cb) {
     this.findOne({
         _id: id
-    }).populate('user', 'name').exec(cb);
+    }).populate('user', 'name').populate('cards').exec(cb);
 };
 
 mongoose.model('Inventory', InventorySchema);
