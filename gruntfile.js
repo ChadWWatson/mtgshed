@@ -98,7 +98,7 @@ module.exports = function(grunt) {
         },
         env: {
             test: {
-                NODE_ENV: 'production'
+                NODE_ENV: 'dev'
             }
         },
         karma: {
