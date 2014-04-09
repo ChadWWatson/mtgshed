@@ -128,7 +128,7 @@ module.exports = function(grunt) {
     if (process.env.NODE_ENV === 'production') {
         grunt.registerTask('default', ['jshint', 'sass', 'csslint', 'cssmin', 'uglify']);
     } else {
-        grunt.registerTask('default', ['jshint', 'sass', 'csslint', 'concurrent']);
+        grunt.registerTask('default', ['jshint', 'sass', 'csslint', 'cssmin', 'uglify', 'concurrent']);
     }
 
     //Test task.
