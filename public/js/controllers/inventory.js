@@ -28,7 +28,7 @@ angular.module('mtgshed.dashboard').controller('InventoryController', ['$scope',
 		$http.post('/api/inventory/' + $stateParams.inventoryId + '/cards',{cardId: $scope.currentCard._id})
 			.success(function(card){
 				if(card !== null) {
-					$scope.box.cards.push($scope.currentCard);
+					$scope.box.cards.push(angular.copy($scope.currentCard));
 				}
 			}).
 			error(function(error) {
